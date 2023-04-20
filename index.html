@@ -2,30 +2,86 @@
 <html>
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Formulario con Bootstrap</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
 </head>
 
 <body>
 
-    <p id="id1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Formulario</div>
+                    <div class="card-body">
 
-    </p>
+                        <div class="form-group">
+                            <label for="identificacion">Identificación:</label>
+                            <input type="text" class="form-control" id="identificacion" name="identificacion">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" class="form-control" id="direccion" name="direccion">
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad:</label>
+                            <input type="text" class="form-control" id="ciudad" name="ciudad">
+                        </div>
+                        <div class="form-group">
+                            <label for="pais">País:</label>
+                            <input type="text" class="form-control" id="pais" name="pais">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="text" class="form-control" id="telefono" name="telefono">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="text" class="form-control" id="email" name="email">
+                        </div>
+                        <button class="btn btn-primary" onclick="registrar()">Enviar</button>
+                        <button class="btn btn-primary" onclick="llenarTabla()">Listar</button>
 
-    <p id="id2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </p>
+    <div class="table-responsive">
+        <table class="table mt-3" id="tabla-contenido">
+            <thead>
+                <tr>
+                    <th>Identificación</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Dirección</th>
+                    <th>Ciudad</th>
+                    <th>País</th>
+                    <th>Teléfono</th>
+                    <th>Correo electrónico</th>
+                </tr>
+            </thead>
+            <tbody>
 
-    <button onclick="miFuncion"></button>
-
-    <script>
-        document.getElementById('id1').innerHTML = 'Contenido'
-    </script>
+            </tbody>
+        </table>
+    </div>
 
     <script src="app.js"></script>
 
